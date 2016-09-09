@@ -3,9 +3,8 @@
 var dataLayer;
 var value;
 var layer;
-var theVariable = "hello World";
-//var url_example = 'https://eneedham-whyy.carto.com/api/v2/viz/395c5446-6573-11e6-9248-0e05a8b3e3d7/viz.json';
 var url_example = 'https://eneedham-whyy.carto.com/api/v2/viz/6476f322-7561-11e6-87f4-0e3ebc282e83/viz.json';
+
 
 // var css598 = "#pa_school_districts_2015_setpercentages{polygon-fill: #FFFFCC;polygon-opacity: 0.8;line-color: #FFF;line-width: 0.5;line-opacity: 1;}#pa_school_districts_2015_setpercentages [ totch_5_98 > 502681.2] {polygon-fill: #3a7922;}#pa_school_districts_2015_setpercentages [ totch_5_98 <= 502681.2] {polygon-fill: #3a7922;}#pa_school_districts_2015_setpercentages [ totch_5_98 <= 211208.4] {polygon-fill: #7eb669;}#pa_school_districts_2015_setpercentages [ totch_5_98 <= 125884.3] {polygon-fill: #abd69b;}#pa_school_districts_2015_setpercentages [totch_5_98 = 0] {polygon-fill: #dcdcdc;}";
 // var css10 = "#pa_school_districts_2015_setpercentages{polygon-fill: #FFFFCC;polygon-opacity: 0.8;line-color: #FFF;line-width: 0.5;line-opacity: 1;}#pa_school_districts_2015_setpercentages [ totch_10 > 745392.85] {polygon-fill: #3a7922;}#pa_school_districts_2015_setpercentages [ totch_10 <= 745392.85] {polygon-fill: #3a7922;}#pa_school_districts_2015_setpercentages [ totch_10 <= 227083.15] {polygon-fill: #7eb669;}#pa_school_districts_2015_setpercentages [ totch_10 <= 84594.82] {polygon-fill: #abd69b;}#pa_school_districts_2015_setpercentages [ totch_10 = 0] {polygon-fill: #dcdcdc;}#pa_school_districts_2015_setpercentages [ totch_10 <= -11031.30] {polygon-fill: #9e91b1;}#pa_school_districts_2015_setpercentages [ totch_10 <= -50489.22 ] {polygon-fill: #7b6a96;}#pa_school_districts_2015_setpercentages [ totch_10 <= -100245.19] {polygon-fill: #5e497e;}";
@@ -83,32 +82,34 @@ var css60 = "#pa_school_districts_2015_setpercentages{polygon-fill: #FFFFCC;poly
 var css70 = "#pa_school_districts_2015_setpercentages{polygon-fill: #FFFFCC;polygon-opacity: 0.8;line-color: #FFF;line-width: 0.5;line-opacity: 1;}#pa_school_districts_2015_setpercentage [ pup_70 <= 14576.073520] {polygon-fill: #006d2c;}#pa_school_districts_2015_setpercentages [ pup_70 <= 5995.790102] {polygon-fill: #31a354;}#pa_school_districts_2015_setpercentages [ pup_70 <= 4491.090421] {polygon-fill:#74c476;}#pa_school_districts_2015_setpercentages [ pup_70 <= 3055.448955] {polygon-fill: #bae4b3;}#pa_school_districts_2015_setpercentages [ pup_70 <= 1961.998050]{polygon-fill: #edf8e9;line-color: #D1D2D1;}";
 var css80 = "#pa_school_districts_2015_setpercentages{polygon-fill: #FFFFCC;polygon-opacity: 0.8;line-color: #FFF;line-width: 0.5;line-opacity: 1;}#pa_school_districts_2015_setpercentage [ pup_80 <= 14576.073520] {polygon-fill: #006d2c;}#pa_school_districts_2015_setpercentages [ pup_80 <= 5995.790102] {polygon-fill: #31a354;}#pa_school_districts_2015_setpercentages [ pup_80 <= 4491.090421] {polygon-fill:#74c476;}#pa_school_districts_2015_setpercentages [ pup_80 <= 3055.448955] {polygon-fill: #bae4b3;}#pa_school_districts_2015_setpercentages [ pup_80 <= 1961.998050]{polygon-fill: #edf8e9;line-color: #D1D2D1;}";
 var css90 = "#pa_school_districts_2015_setpercentages{polygon-fill: #FFFFCC;polygon-opacity: 0.8;line-color: #FFF;line-width: 0.5;line-opacity: 1;}#pa_school_districts_2015_setpercentage [ pup_90 <= 14576.073520] {polygon-fill: #006d2c;}#pa_school_districts_2015_setpercentages [ pup_90 <= 5995.790102] {polygon-fill: #31a354;}#pa_school_districts_2015_setpercentages [ pup_90 <= 4491.090421] {polygon-fill:#74c476;}#pa_school_districts_2015_setpercentages [ pup_90 <= 3055.448955] {polygon-fill: #bae4b3;}#pa_school_districts_2015_setpercentages [ pup_90 <= 1961.998050]{polygon-fill: #edf8e9;line-color: #D1D2D1;}";
-var css100 = "#pa_school_districts_2015_setpercentages{polygon-fill: #FFFFCC;polygon-opacity: 0.8;line-color: #FFF;line-width: 0.5;line-opacity: 1;}#pa_school_districts_2015_setpercentage [ pup_100 <= 14576.073520 {polygon-fill: #006d2c;}#pa_school_districts_2015_setpercentages [ pup_100 <= 5995.790102] {polygon-fill: #31a354;}#pa_school_districts_2015_setpercentages [ pup_100 <= 4491.090421] {polygon-fill:#74c476;}#pa_school_districts_2015_setpercentages [ pup_100 <= 3055.448955] {polygon-fill: #bae4b3;}#pa_school_districts_2015_setpercentages [ pup_100 <= 1961.998050]{polygon-fill: #edf8e9;line-color: #D1D2D1;}";
+var css100 = "#pa_school_districts_2015_setpercentages{polygon-fill: #FFFFCC;polygon-opacity: 0.8;line-color: #FFF;line-width: 0.5;line-opacity: 1;}#pa_school_districts_2015_setpercentage [ pup_100 <= 14363.65953] {polygon-fill: #006d2c;}#pa_school_districts_2015_setpercentages [ pup_100 <= 5995.790102] {polygon-fill: #31a354;}#pa_school_districts_2015_setpercentages [ pup_100 <= 4491.090421] {polygon-fill:#74c476;}#pa_school_districts_2015_setpercentages [ pup_100 <= 3055.448955] {polygon-fill: #bae4b3;}#pa_school_districts_2015_setpercentages [ pup_100 <= 1961.998050]{polygon-fill: #edf8e9;line-color: #D1D2D1;}";
 
 
 
 
 
-function removeTip (x, y, val1, val2, val3){
+function removeTip (x, y, val1, val2, val3, val4, val5){
   $('.cartodb-tooltip').remove();
   $('#infowindow_template').hide();
   $('#infowindow_template').empty();
   $('#infowindow_template').append('<div class="hello"><div class="tip_container"><h4>{{name}}</h4><h4>Total State Funding</h4><p>${{'+ val1 +'}}<p><h4>State Funding per Pupil</h4><p>${{'+ val2 +'}}<p><h4>Funding Rank</h4><p>{{'+ val3 +'}} out of 500<p><div class="tipCircle"></div><h4>Median Household Income</h4><p><font color={{color}}>{{hh_order}}</font> ${{smed_hh}}</p></div></div>');
+  $('.legend_val').empty();
+  $('.legend_val').append('<p style="margin-top: 3px; margin-bottom: 0px; font-family: Lato; font-size: small">'+ val4 + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+ val5 + '</p>');
   x.setCartoCSS(y);
 }
 
 function slideCSS(d, x){
-return d == 5.98   ? removeTip(x, css598, 'stot_5_98', 'spup_5_98', 'rank_5_98') :
-  d == 10   ?   removeTip(x, css10, 'stot_10', 'spup_10', 'rank_10'):
-  d == 20   ?   removeTip(x, css20, 'stot_20', 'spup_20', 'rank_20') :
-  d == 30   ?   removeTip(x, css30, 'stot_30', 'spup_30', 'rank_30') :
-  d == 40   ?   removeTip(x, css40, 'stot_40', 'spup_40', 'rank_40') :
-  d == 50   ?   removeTip(x, css50, 'stot_50', 'spup_50', 'rank_50') :
-  d == 60   ?   removeTip(x, css60, 'stot_60', 'spup_60', 'rank_60') :
-  d == 70   ?   removeTip(x, css70, 'stot_70', 'spup_70', 'rank_70') :
-  d == 80   ?   removeTip(x, css80, 'stot_80', 'spup_80', 'rank_80') :
-  d == 90   ?   removeTip(x, css90, 'stot_90', 'spup_90', 'rank_90') :
-  d == 100  ?   removeTip(x, css100, 'stot_100', 'spup_100', 'rank_100'):
+return d == 5.98   ? removeTip(x, css598, 'stot_5_98', 'spup_5_98', 'rank_5_98', '$483', '$14,576') :
+  d == 10   ?   removeTip(x, css10, 'stot_10', 'spup_10', 'rank_10', '$491', '$14,566'):
+  d == 20   ?   removeTip(x, css20, 'stot_20', 'spup_20', 'rank_20', '$510', '$14,544') :
+  d == 30   ?   removeTip(x, css30, 'stot_30', 'spup_30', 'rank_30', '$529', '$14,521') :
+  d == 40   ?   removeTip(x, css40, 'stot_40', 'spup_40', 'rank_40', '$548', '$14,499') :
+  d == 50   ?   removeTip(x, css50, 'stot_50', 'spup_50', 'rank_50', '$567', '$14,476') :
+  d == 60   ?   removeTip(x, css60, 'stot_60', 'spup_60', 'rank_60', '$586', '$14,454') :
+  d == 70   ?   removeTip(x, css70, 'stot_70', 'spup_70', 'rank_70', '$605', '$14,431') :
+  d == 80   ?   removeTip(x, css80, 'stot_80', 'spup_80', 'rank_80', '$624', '$14,408') :
+  d == 90   ?   removeTip(x, css90, 'stot_90', 'spup_90', 'rank_90', '$585', '$14,386') :
+  d == 100  ?   removeTip(x, css100, 'stot_100', 'spup_100', 'rank_100', '$232', '$14,363'):
                removeTip(x, css598, 'stot_5_98', 'spup_5_98', 'rank_5_98');
 }
 

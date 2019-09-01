@@ -60,42 +60,43 @@ html, body, #map {
 }
 
 div.cartodb-legend-stack{
-  opacity: .8;
+  opacity: .9;
 }
 
 .slideOuter{
   position: absolute;
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  margin:0px;
+  border: none;
 }
 
 .slideBox{
   position: absolute;
+  left: 40%;
   border-radius: 4px;
   border: 1px solid #999;
   background: #fff;
   box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
-  opacity: .9;
-  width: 20%;
-  height: 14%;
+  opacity: 1;
+  width: 16%;
+  height: 140px;
   bottom: 2%;
   z-index: 9999;
-align-self: auto;
 }
 
 
 .slideLabel{
   float: left;
-    position: absolute;
-    font-family:"Trebuchet MS", Helvetica, sans-serif;
-    font-size: 15px;
-    color: #666;
-    text-align: center;
-    width: 100%;
-    top: 10%;
-    z-index: 9998;
+  position: absolute;
+  font-family:"Trebuchet MS", Helvetica, sans-serif;
+  font-size: 15px;
+  color: #666;
+  -webkit-text-align: center;
+  text-align: center;
+  width: 100%;
+  top: 10%;
+  z-index: 9998;
 }
 
 .percLabel{
@@ -104,6 +105,7 @@ align-self: auto;
     font-weight: bold;
     font-size: 20px;
     color: #666;
+    -webkit-text-align: center;
     text-align: center;
     width: 100%;
     bottom: 50%;
@@ -136,6 +138,7 @@ align-self: auto;
     font-size: 12px;
     color: #353438;
     width: 100%;
+    -webkit-text-align: center;
     text-align: center;
     bottom: 8%;
     z-index: 9998;
@@ -166,6 +169,7 @@ align-self: auto;
 .hello{
 width: 180px;
 z-index: 99999;
+cursor: default;
 background-color: white;
 color: black;
 opacity: 0.9;
@@ -190,8 +194,6 @@ overflow-y: hidden;
   font-family:"Trebuchet MS", Helvetica, sans-serif;
 }
 
-
-
 .tip_container h4{
 color:#2F2E2E;
 margin-bottom: 0;
@@ -201,4 +203,30 @@ margin-bottom: 0;
   margin-top: -2px;
   margin-bottom: 0;
   color: #969696;
+}
+
+@media only screen and (max-width: 1400px) {
+    .slideBox {
+          width: 35%;
+          left: 25%;
+    }
+    .nstSlider .leftGrip {
+      position: relative;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+  .cartodb-legend-stack{
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+    .slideBox {
+          width: 75%;
+          left: 12%;
+    }
+    .percLabel{
+      bottom: 45%;
+    }
 }

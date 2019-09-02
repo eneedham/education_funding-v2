@@ -5,3 +5,6 @@ An interactive map which shows how each of Pennsylvania's 500 school districts' 
 This map was created with WHYY for [Keystone Crossroads](https://whyy.org/programs/keystone-crossroads/), a collaboration between PA public media organizations to report on topics that impact the state. It was published in October of 2016 in an article titled [*How would your school district fare if lawmakers ramped up the new Pa. funding formula?*](https://whyy.org/articles/how-would-your-school-district-fare-if-lawmakers-ramped-up-the-new-pa-funding-formula/).
 
 The standalone map can be viewed at: https://eneedham.github.io/pa_fair_funding_formula_map/
+
+#### Application screenshot
+<img src="images/map-view.png">
